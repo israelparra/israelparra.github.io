@@ -5,16 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- Título de la página que aparece en la pestaña del navegador -->
     <title>Portfolio</title>
+
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <!-- MENU ENCABEZADO -->
+    <!-- SECCION BARRA DE NAVEGACION -->
     <div class="contenedor-header">
         <header>
+            <!-- Logo o nombre del sitio -->
             <div class="logo">
                 <a href="#">Oscar</a>
             </div>
+            <!-- Menú de navegación -->
             <nav id="nav">
                 <ul>
                     <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
@@ -24,12 +28,13 @@
                     <li><a href="#gallery" onclick="seleccionar()">SOFTWARE</a></li>
                     <li><a href="#lab" onclick="seleccionar()">LAB</a></li>
                     <li><a href="#resume" onclick="seleccionar()">RESUME</a></li>
-                    <li><a href="#resume" onclick="seleccionar()">ECOSYSTEMS</a></li>
-                    <li><a href="#resume" onclick="seleccionar()">EXP</a></li>
+                    <li><a href="#ecosystems" onclick="seleccionar()">ECOSYSTEMS</a></li>
+                    <li><a href="#exp" onclick="seleccionar()">EXP</a></li>
                     
                     
                 </ul>
             </nav>
+            <!-- Botón para mostrar/ocultar el menú en dispositivos móviles -->
             <div class="nav-responsive" onclick="mostrarOcultarMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -39,11 +44,16 @@
     <!-- SECCION INICIO -->
     <section id="inicio" class="inicio">
         <div class="contenido-banner">
+            <!-- Contenedor de la imagen principal -->
             <div class="contenedor-img">
-                <img src="img/Oscar4.png" alt="">
+                <!-- Imagen principal -->
+                <img src="img/Oscar4.png" alt=""> 
             </div>
+            <!-- Información principal de la portada -->
             <h1>Oscar Parra-Camara</h1>
             <h2>PhD Student - CEE</h2>
+            <h2 class="sub2">oparraca@uci.edu</h2>
+            <!-- Enlaces a redes sociales -->
             <div class="redes">
                 <a href="https://www.linkedin.com/in/parracamaraoscar/"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://twitter.com/oscarparrac_"><i class="fa-brands fa-twitter"></i></a>
@@ -54,13 +64,14 @@
         </div>
     </section>
 
-<!-- SECCION SOBRE MI -->
+<!-- SECCION EDUCACION -->
 <section id="sobremi" class="sobremi">
     <div class="contenido-seccion">
         <h2>Education</h2>
-        <p class="desc">I am a new doctoral student in the Civil and Environmental Engineering Program at the University of California, Irvine. My research will focus on enhanced geothermal systems at the Center for Understanding Subsurface Signals and Permeability (CUSSP), which is led by the Pacific Northwest National Laboratory (PNNL) of the U.S. Department of Energy.</p>
+        <!-- Descripción del contenido-->
+        <p class="desc">I am a new doctoral student in the Civil and Environmental Engineering Program at the University of California, Irvine. My research is focus on enhanced geothermal systems at the Center for Understanding Subsurface Signals and Permeability (CUSSP), which is led by the Pacific Northwest National Laboratory (PNNL) of the U.S. Department of Energy.</p>
 
-        <!-- Nueva sección de imágenes -->
+        <!-- IMAGENES DE ITSON, UCI -->
         <div class="imagenes-educacion">
             <div class="imagen-item">
                 <img src="img/Itson1.png" alt="Título 1">
@@ -83,13 +94,14 @@
 
 
 
-<!-- SECCION TEXTO E IMAGEN -->
+<!-- SECCION DOCTORADO PROYECTO -->
 <section id="texto-imagen" class="texto-imagen">
     <div class="contenido-seccion">
         <div class="fila">
             <div class="col texto">
+                <!-- Información del proyecto de doctorado -->
                 <h2>Ph.D. Project</h2>
-                <p>I will be collaborating with the Center for Understanding Subsurface Signals and Permeability (CUSSP) project as a PhD student in the Civil and Environmental Engineering program at the University of California, Irvine. My research will focus on natural material micromodel studies of reactive flow and gradients at the core scale.</p>
+                <p>I collaborate with the Center for Understanding Subsurface Signals and Permeability (CUSSP) project as a PhD student in the Civil and Environmental Engineering program at the University of California, Irvine. My research focuses on micromodel studies of natural materials reactive flow and gradients at the core scale.</p>
                 <a href="https://www.pnnl.gov/projects/cussp" class="boton">CUSSP Website</a>
             </div>
             <div class="col imagen">
@@ -100,7 +112,7 @@
 </section>
 
 
-<!-- SECCION TEXTO E IMAGEN INVERSA -->
+<!-- SECCION MAESTRIA PROYECTO -->
 <section id="texto-imagen-inversa" class="texto-imagen-inversa">
     <div class="contenido-seccion">
         <div class="fila">
@@ -108,6 +120,7 @@
                 <img src="img/Sapflow2 (1).png" alt="Descripción de la imagen">
             </div>
             <div class="col texto">
+                <!-- Información del proyecto de maestría -->
                 <h2>M.S. Project</h2>
                 <p>With the support of the CONAHCYT fellowship and ITSON, I developed a sap flow monitoring system for the quantification of transpiration in wheat plants. My responsibilities included sensor fabrication, isolation, data collection system design, and calibration. As a result, we created an automatic tool to obtain real-time transpiration, which addresses local challenges related to wheat crop production in the Yaqui Valley, Sonora, Mexico. 
                     Submitted manuscript, currently under review.
@@ -121,19 +134,21 @@
  <!-- SECCION SKILLS -->
  <section class="skills" id="skills">
     <div class="contenido-seccion">
-        <!-- <h2>Skills</h2> -->
         <div class="fila">
-            <!-- Technical Skill -->
+            <!-- Columna de skills -->
             <div class="col">
                 <h3>Technical Skills</h3>
+                <!-- Cada barra de skill -->
                 <div class="skill">
                     <span>Field work</span>
+                    <!-- Barra de progreso para la habilidad -->
                     <div class="barra-skill">
                         <div class="progreso">
                             <span></span>
                         </div>
                     </div>
                 </div>
+                <!-- Cada barra de skill -->
                 <div class="skill">
                     <span>Lab work</span>
                     <div class="barra-skill">
@@ -142,6 +157,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Cada barra de skill -->
                 <div class="skill">
                     <span>Research</span>
                     <div class="barra-skill">
@@ -150,14 +166,16 @@
                         </div>
                     </div>
                 </div>
+                <!-- Cada barra de skill -->
                 <div class="skill">
-                    <span>Softwares</span>
+                    <span>Software</span>
                     <div class="barra-skill">
                         <div class="progreso">
                             <span></span>
                         </div>
                     </div>
                 </div>
+                <!-- Cada barra de skill -->
                 <div class="skill">
                     <span>Sensor deployment</span>
                     <div class="barra-skill">
@@ -167,9 +185,9 @@
                     </div>
                 </div>
             </div>
-            <!-- Professional Skills -->
             <div class="col">
                 <h3>Professional Skills</h3>
+                <!-- Cada barra de skill -->
                 <div class="skill">
                     <span>Teamwork</span>
                     <div class="barra-skill">
@@ -178,6 +196,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Cada barra de skill -->
                 <div class="skill">
                     <span>Presentations</span>
                     <div class="barra-skill">
@@ -186,6 +205,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Cada barra de skill -->
                 <div class="skill">
                     <span>Writing</span>
                     <div class="barra-skill">
@@ -194,6 +214,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Cada barra de skill -->
                 <div class="skill">
                     <span>Enthusiasm</span>
                     <div class="barra-skill">
@@ -202,6 +223,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Cada barra de skill -->
                 <div class="skill">
                     <span>Resilience</span>
                     <div class="barra-skill">
@@ -216,38 +238,46 @@
 </section>
 
 
-
+<!-- SECCION SOFTWARE  -->
 <section class="gallery" id="gallery">
     <h2>Software</h2>
     <div class="gallery-container">
+        <!-- Cada imagen de software -->
         <div class="gallery-item">
             <img src="img/1s.png" alt="Descripción de la foto 1">
             <p>Matlab</p>
         </div>
+        <!-- Cada imagen de software -->
         <div class="gallery-item">
             <img src="img/2s.png" alt="Descripción de la foto 2">
             <p>R Studio</p>
         </div>
+        <!-- Cada imagen de software -->
         <div class="gallery-item">
             <img src="img/3s.png" alt="Descripción de la foto 3">
             <p>ArcGis</p>
         </div>
+        <!-- Cada imagen de software -->
         <div class="gallery-item">
             <img src="img/4s.png" alt="Descripción de la foto 4">
             <p>QGis</p>
         </div>
+        <!-- Cada imagen de software -->
         <div class="gallery-item">
             <img src="img/5s.png" alt="Descripción de la foto 5">
             <p>Google Earth Engine</p>
         </div>
+        <!-- Cada imagen de software -->
         <div class="gallery-item">
             <img src="img/6s.png" alt="Descripción de la foto 6">
             <p>Hydrus-1D</p>
         </div>
+        <!-- Cada imagen de software -->
         <div class="gallery-item">
             <img src="img/7s.png" alt="Descripción de la foto 7">
             <p>Stella isee systems</p>
         </div>
+        <!-- Cada imagen de software -->
         <div class="gallery-item">
             <img src="img/8s.png" alt="Descripción de la foto 8">
             <p>Multisim</p>
@@ -258,12 +288,13 @@
 
 
 <!-- SECCION LABORTAROIO -->
-<section id="texto-imagen" class="texto-imagen">
+<section id="lab" class="texto-imagen">
     <div class="contenido-seccion">
         <div class="fila">
             <div class="col texto">
+                <!-- Información de la sección de laboratorio -->
                 <h2>Subsurface Processes Lab</h2>
-                <p>I will be joining this important research group at the University of California, Irvine, which is led by Dr. Russell Detwiler. I am highly motivated to work hard and contribute to the advancement of research.</p>
+                <p>I joined this important research group at the University of California, Irvine, led by Dr. Russell Detwiler. I am very motivated to work hard and contribute to the advancement of science.</p>
                 <a href="https://detwiler.eng.uci.edu/" class="boton">LAB Website</a>
             </div>
             <div class="col imagen">
@@ -274,58 +305,65 @@
 </section>
 
 
-<!-- SECCION TEXTO E IMAGEN INVERSA -->
-<section id="texto-imagen-inversa" class="texto-imagen-inversa">
+<!-- SECCION RESUME -->
+<section id="resume" class="texto-imagen-inversa">
     <div class="contenido-seccion">
         <div class="fila">
             <div class="col imagen">
                 <img src="img/CV3.png" alt="Descripción de la imagen">
             </div>
             <div class="col texto">
+                <!-- Información de la sección de resume -->
                 <h2>Resume</h2>
-                <p>I'm so excited to share more about myself and my journey to becoming a future research professor with you through my resume!</p>
-                <a href="https://detwiler.eng.uci.edu/" class="boton2">Full Resume</a>
+                <p>I'm so excited to share more about myself and my journey to becoming a future research professor with you, through my resume!</p>
+                <a href="https://drive.google.com/drive/folders/1xndofgPjWaEW3vQdVF1u5MrWsYqOKtvP" class="boton2">Full Resume</a>
             </div>
         </div>
     </div>
 </section>
 
- <!-- SECCION FIELDWORK -->
- <section id="portfolio" class="portfolio">
+
+ <!-- SECCION ECOSYSTEMS -->
+ <section id="ecosystems" class="portfolio">
     <div class="contenido-seccion">
         <h2>Ecosystems</h2>
         <div class="galeria">
+            <!-- Cada imagen de ecosistema -->
             <div class="proyecto">
                 <img src="img/4.png" alt="">
                 <div class="overlay">
                     <h3>Agroecosystems</h3>
                 </div>
             </div>
+            <!-- Cada imagen de ecosistema -->
             <div class="proyecto">
                 <img src="img/3.png" alt="">
                 <div class="overlay">
                     <h3>Tropical deciduous forests</h3>
                 </div>
             </div>
+            <!-- Cada imagen de ecosistema -->
             <div class="proyecto">
                 <img src="img/2.png" alt="">
                 <div class="overlay">
                     <h3>Mangroves</h3>
                 </div>
             </div>
+            <!-- Cada imagen de ecosistema -->
             <div class="proyecto">
                 <img src="img/6 (2).png" alt="">
                 <div class="overlay">
                     <h3>Tropical dry forests</h3>
                 </div>
             </div>
+            <!-- Cada imagen de ecosistema -->
             <div class="proyecto">
                 <img src="img/1.png" alt="">
                 <div class="overlay">
                     <h3>Cloud forests</h3>
-                    <!-- <p>Fotografía</p> -->
                 </div>
             </div>
+            <!-- Cada imagen de ecosistema -->
             <div class="proyecto">
                 <img src="img/5.png" alt="">
                 <div class="overlay">
@@ -339,41 +377,46 @@
 
 
  <!-- SECCION ACADEMIC EXPERIENCE -->
- <section id="portfolio2" class="portfolio2">
+ <section id="exp" class="portfolio2">
     <div class="contenido-seccion2">
         <h2>Academic Experience</h2>
         <div class="galeria2">
+            <!-- Cada imagen de academic experience -->
             <div class="proyecto2">
                 <img src="img/1ac.png" alt="">
                 <div class="overlay2">
                     <h3>Sap flow project</h3>
-                    <!-- <p>Fotografía</p> -->
                 </div>
             </div>
+            <!-- Cada imagen de academic experience -->
             <div class="proyecto2">
                 <img src="img/2ac.png" alt="">
                 <div class="overlay2">
-                    <h3>ITSON-UoNottingham Exploiting night-time traits</h3>
+                    <h3>ITSON-UoNottingham <br> Exploiting night-time traits</h3>
                 </div>
             </div>
+            <!-- Cada imagen de academic experience -->
             <div class="proyecto2">
                 <img src="img/3ac.png" alt="">
                 <div class="overlay2">
-                    <h3>ITSON-ASU TEAM</h3>
+                    <h3>ITSON-ASU <br> TEAM</h3>
                 </div>
             </div>
+            <!-- Cada imagen de academic experience -->
             <div class="proyecto2">
                 <img src="img/4ac.png" alt="">
                 <div class="overlay2">
-                    <h3>ITSON-UTEP Water use efficiency</h3>
+                    <h3>ITSON-UTEP <br> Water use efficiency</h3>
                 </div>
             </div>
+            <!-- Cada imagen de academic experience -->
             <div class="proyecto2">
                 <img src="img/5ac.png" alt="">
                 <div class="overlay2">
                     <h3>Presentations</h3>
                 </div>
             </div>
+            <!-- Cada imagen de academic experience -->
             <div class="proyecto2">
                 <img src="img/6ac.png" alt="">
                 <div class="overlay2">
@@ -390,19 +433,21 @@
     <div class="contenido-seccion3">
         <h2>Hobbies</h2>
         <div class="galeria3">
+            <!-- Cada imagen de hobbies -->
             <div class="proyecto3">
                 <img src="img/a.png" alt="">
                 <div class="overlay3">
                     <h3>SOCCER</h3>
-                    <!-- <p>Fotografía</p> -->
                 </div>
             </div>
+            <!-- Cada imagen de hobbies -->
             <div class="proyecto3">
                 <img src="img/b.png" alt="">
                 <div class="overlay3">
                     <h3>MUSIC</h3>
                 </div>
             </div>
+            <!-- Cada imagen de hobbies -->
             <div class="proyecto3">
                 <img src="img/c.png" alt="">
                 <div class="overlay3">
@@ -413,11 +458,12 @@
     </div>
 </section>
 
-    <!-- footer -->
+<!-- SECCION FOOTER -->
     <footer>
         <a href="#inicio" class="arriba">
             <i class="fa-solid fa-angles-up"></i>
         </a>
+        <!-- Enlaces a redes sociales -->
         <div class="redes">
             <a href="https://www.linkedin.com/in/parracamaraoscar/"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://twitter.com/oscarparrac_"><i class="fa-brands fa-twitter"></i></a>
