@@ -3,11 +3,13 @@ body {
     font-family: 'Comic Sans MS', sans-serif; /* Fuentes divertidas y románticas */
     height: 100vh;
     margin: 0;
+    overflow: hidden; /* Previene el desplazamiento */
 }
 
 .pantalla {
     height: 100vh;
     display: none; /* Oculto por defecto */
+    overflow-y: auto; /* Permite desplazamiento vertical si el contenido es muy largo */
 }
 
 .pantalla.especial {
@@ -34,10 +36,36 @@ h2 {
     border: none;
     padding: 10px 20px;
     font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-love:hover {
+    transform: scale(1.1);
 }
 
 .especial {
     background-image: url('img/redondo.png');
     background-size: cover;
     background-position: center;
+}
+
+/* Estilos responsivos para iPhone X y iPhone 11 */
+@media screen and (max-width: 414px) { /* iPhone 11 Pro Max width */
+    .text-love {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .btn-love {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    img.img-fluid {
+        max-width: 80%;
+        height: auto;
+    }
 }
