@@ -1,7 +1,9 @@
+// app.js
 document.addEventListener('DOMContentLoaded', () => {
     let currentPantalla = 1; // Pantalla actual
-    
-    function mostrarPantalla(pantalla) {
+
+    // Función para mostrar la pantalla correcta
+    window.mostrarPantalla = function(pantalla) {
         // Ocultar todas las pantallas
         const pantallas = document.querySelectorAll('.pantalla');
         pantallas.forEach(p => p.style.display = 'none');
@@ -13,17 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             console.error('Pantalla no encontrada: pantalla' + pantalla);
         }
-    }
+    };
 
-    // Navegar a la siguiente pantalla
-    function siguientePantalla() {
-        currentPantalla++;
-        mostrarPantalla(currentPantalla);
-    }
-
-    // Añadir eventos a los botones de navegación
-    const botonesSiguiente = document.querySelectorAll('.btn-love');
-    botonesSiguiente.forEach((boton, index) => {
-        boton.addEventListener('click', () => mostrarPantalla(index + 2));
-    });
+    // Mostrar la primera pantalla al cargar la página
+    mostrarPantalla(1);
 });
