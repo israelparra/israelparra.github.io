@@ -1,0 +1,37 @@
+body {
+    background-color: #FFE4E1; /* Color rosa claro */
+    font-family: 'Comic Sans MS', sans-serif; /* Fuentes divertidas y románticas */
+    height: 100vh;
+}
+
+.pantalla {
+    height: 100vh;
+}
+
+.text-love {
+    color: #FF69B4; /* Rosa amoroso */
+    font-size: 2rem;
+}
+
+h2 {
+    background-color: rgba(255, 105, 180, 0.5); /* Fondo rosa semitransparente */
+    color: white; /* Color de texto blanco */
+    padding: 10px; /* Espaciado alrededor del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 2.5rem; /* Aumentar tamaño de fuente */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra de texto para mejor legibilidad */
+}
+
+.btn-love {
+    background-color: #FF1493;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+.especial {
+    background-image: url('img/redondo.png');
+    background-size: cover;
+    background-position: center;
+}

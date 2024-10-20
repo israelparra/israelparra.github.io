@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Cosas que me gustan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tu propio CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Pantalla inicial -->
+    <div class="container-fluid d-flex align-items-center justify-content-center pantalla especial" id="pantalla1">
+        <div class="text-center">
+            <img src="img/fridasofia1.png" alt="Frida Sofía" class="img-fluid rounded-circle" width="150" height="150">
+            <h1 class="text-love mt-4">Cosas que me gustan de Frida Sofía</h1>
+            <button class="btn btn-love mt-4" onclick="mostrarPantalla(2)">Ver más</button>
+        </div>
+    </div>
+
+    <!-- Pantallas de 2 a 10 -->
+    <div class="container-fluid d-flex align-items-center justify-content-center pantalla " id="pantalla2" style="display:none;">
+        <div class="text-center">
+            <h2 class="text-love">Me encanta su sonrisa</h2>
+            <img src="img/sonrisa.jpeg" alt="Frida" class="img-fluid mt-3">
+            <button class="btn btn-love mt-4" onclick="mostrarPantalla(3)">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex align-items-center justify-content-center pantalla" id="pantalla3" style="display:none;">
+        <div class="text-center">
+            <h2 class="text-love">Admiro su vida fit</h2>
+            <img src="img/fit.jpeg" alt="Frida" class="img-fluid mt-3">
+            <button class="btn btn-love mt-4" onclick="mostrarPantalla(4)">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex align-items-center justify-content-center pantalla" id="pantalla3" style="display:none;">
+        <div class="text-center">
+            <h2 class="text-love">Es muy cariñosa</h2>
+            <img src="img/cariño.jpeg" alt="Frida" class="img-fluid mt-3">
+            <button class="btn btn-love mt-4" onclick="mostrarPantalla(4)">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex align-items-center justify-content-center pantalla " id="pantalla2" style="display:none;">
+        <div class="text-center">
+            <h2 class="text-love">Me gusta su cabello</h2>
+            <img src="img/bonita.jpeg" alt="Frida" class="img-fluid mt-3">
+            <button class="btn btn-love mt-4" onclick="mostrarPantalla(3)">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex align-items-center justify-content-center pantalla " id="pantalla2" style="display:none;">
+        <div class="text-center">
+            <h2 class="text-love">Es muy divertida</h2>
+            <img src="img/divertida.jpeg" alt="Frida" class="img-fluid mt-3">
+            <button class="btn btn-love mt-4" onclick="mostrarPantalla(3)">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex align-items-center justify-content-center pantalla " id="pantalla2" style="display:none;">
+        <div class="text-center">
+            <h2 class="text-love">Me gusta su sencillez</h2>
+            <img src="img/sencillez.jpeg" alt="Frida" class="img-fluid mt-3">
+            <button class="btn btn-love mt-4" onclick="mostrarPantalla(3)">Siguiente</button>
+        </div>
+    </div>
+
+    
+    <div class="container-fluid d-flex align-items-center justify-content-center pantalla " id="pantalla2" style="display:none;">
+        <div class="text-center">
+            <h2 class="text-love">Disfruto su compañia</h2>
+            <img src="img/compañia.jpeg" alt="Frida" class="img-fluid mt-3">
+            <button class="btn btn-love mt-4" onclick="mostrarPantalla(3)">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex align-items-center justify-content-center pantalla " id="pantalla2" style="display:none;">
+        <div class="text-center">
+            <h2 class="text-love">Estudiosa y trabajadora</h2>
+            <img src="img/trabajo.jpeg" alt="Frida" class="img-fluid mt-3">
+            <button class="btn btn-love mt-4" onclick="mostrarPantalla(3)">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex align-items-center justify-content-center pantalla " id="pantalla2" style="display:none;">
+        <div class="text-center">
+            <h2 class="text-love">Es muy inteligente</h2>
+            <img src="img/Inteligente.jpeg" alt="Frida" class="img-fluid mt-3">
+            <button class="btn btn-love mt-4" onclick="mostrarPantalla(3)">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex align-items-center justify-content-center pantalla " id="pantalla2" style="display:none;">
+        <div class="text-center">
+            <h2 class="text-love">Es muy leal</h2>
+            <img src="img/Leal.jpeg" alt="Frida" class="img-fluid mt-3">
+            <button class="btn btn-love mt-4" onclick="mostrarPantalla(3)">Siguiente</button>
+        </div>
+    </div>
+
+
+    <!-- Añadir las demás pantallas hasta llegar a la 10 -->
+
+<!-- Pantalla final -->
+<div class="container-fluid d-flex align-items-center justify-content-center pantalla especial" id="pantalla11" style="display:none;">
+    <div class="text-center">
+        <h1 class="text-love">¿Quieres ser mi novia?</h1>
+        <button class="btn btn-love mt-4">Sí</button>
+        <button class="btn btn-love mt-4">No</button>
+    </div>
+</div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tu propio JS -->
+    <script src="app.js"></script>
+</body>
+</html>
