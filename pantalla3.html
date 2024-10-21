@@ -39,8 +39,8 @@
             background-color: #FF1493;
             color: white;
             border: none;
-            padding: 10px 20px;
-            font-size: 1.2rem;
+            padding: 6px 12px;
+            font-size: 1rem;
             transition: transform 0.3s ease;
         }
         
@@ -49,30 +49,41 @@
             background-color: #FF1493;
             color: white;
         }
+
+        .next-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
         
         @media screen and (max-width: 414px) {
             .text-love, h2 {
                 font-size: 1.8rem;
             }
             
-            .btn-love {
-                font-size: 1rem;
-                padding: 8px 16px;
-            }
-            
             img.img-fluid {
                 max-width: 80%;
                 height: auto;
+                margin-top: 20px;
+            }
+
+            .next-button {
+                top: 10px;
+                right: 10px;
             }
         }
     </style>
 </head>
 <body>
+
+    <a href="pantalla3.html" class="btn btn-love next-button">→</a>
+
     <div class="container-fluid d-flex align-items-center justify-content-center pantalla">
         <div class="text-center">
             <h2 class="text-love">Admiro su vida fit</h2>
             <img src="img/fit.jpeg" alt="Frida" class="img-fluid mt-3">
-            <a href="pantalla4.html" class="btn btn-love mt-4">Siguiente</a>
         </div>
     </div>
 </body>
