@@ -2,21 +2,17 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Pregunta especial</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-body {
-    background-color: #FFE4E1;
-    /* Modificación de la declaración de fuentes */
-    font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Comic Neue', sans-serif;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+        body {
+            background-color: #FFE4E1;
+            font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Comic Neue', sans-serif;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
         
         .pantalla {
             height: 100vh;
@@ -25,6 +21,8 @@ body {
             background-image: url('img/redondo.png');
             background-size: cover;
             background-position: center;
+            position: relative;
+            z-index: 1;
         }
         
         .text-love {
@@ -47,6 +45,77 @@ body {
             background-color: #FF1493;
             color: white;
         }
+
+        /* Estilos para los overlays */
+        .celebration-overlay,
+        .sad-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            pointer-events: none;
+        }
+
+        .celebration-gif,
+        .sad-gif {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Estilos para los mensajes */
+        .celebration-message,
+        .sad-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 2.5rem;
+            padding: 20px;
+            border-radius: 15px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .celebration-message {
+            color: white;
+            background-color: rgba(255, 20, 147, 0.8);
+        }
+
+        .sad-message {
+            color: white;
+            background-color: rgba(0, 0, 139, 0.8);
+        }
+
+        /* Efecto de lluvia para el mensaje triste */
+        .rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 100%);
+            animation: rain 1s linear infinite;
+            display: none;
+            z-index: 998;
+            pointer-events: none;
+        }
+
+        @keyframes rain {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 20px; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
         
         @media screen and (max-width: 414px) {
             .text-love {
@@ -57,10 +126,56 @@ body {
                 font-size: 1rem;
                 padding: 8px 16px;
             }
+
+            .celebration-message,
+            .sad-message {
+                font-size: 1.8rem;
+                width: 90%;
+                padding: 15px;
+            }
+        }
+
+        /* Efecto de oscurecimiento gradual */
+        .darken {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 997;
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
+    <!-- Overlay para el gif de celebración -->
+    <div class="celebration-overlay">
+        <img src="https://media.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif" alt="Celebración" class="celebration-gif">
+    </div>
+
+    <!-- Overlay para el gif triste -->
+    <div class="sad-overlay">
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2VtOTdxcXVycnVtamV4d3hreXd5M3Zsb3dzYXFyeGV5YXhpZWlkOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ISOckXUybVfQ4/giphy.gif" alt="Tristeza" class="sad-gif">
+    </div>
+
+    <!-- Efecto de lluvia -->
+    <div class="rain"></div>
+
+    <!-- Efecto de oscurecimiento -->
+    <div class="darken"></div>
+
+    <!-- Mensaje de celebración -->
+    <div class="celebration-message">
+         ¡Te quiero  mucho! ❤️
+    </div>
+
+    <!-- Mensaje triste -->
+    <div class="sad-message">
+        Gracias por tu honestidad 💔
+    </div>
+
     <div class="container-fluid d-flex align-items-center justify-content-center pantalla">
         <div class="text-center">
             <h1 class="text-love">¿Quieres ser mi novia?</h1>
@@ -74,9 +189,30 @@ body {
     <script>
         function respuesta(decision) {
             if (decision === 'Sí') {
-                alert('¡Qué felicidad! ¡Gracias por aceptar!');
+                // Mostrar celebración
+                document.querySelector('.celebration-overlay').style.display = 'block';
+                document.querySelector('.celebration-message').style.display = 'block';
             } else {
-                alert('Oh, entiendo. Gracias por tu honestidad.');
+                // Mostrar efectos tristes
+                document.querySelector('.sad-overlay').style.display = 'block';
+                document.querySelector('.sad-message').style.display = 'block';
+                document.querySelector('.rain').style.display = 'block';
+                document.querySelector('.darken').style.display = 'block';
+
+                // Oscurecer gradualmente el fondo
+                let opacity = 0;
+                const darken = document.querySelector('.darken');
+                const interval = setInterval(() => {
+                    opacity += 0.1;
+                    if (opacity >= 0.5) {
+                        clearInterval(interval);
+                    }
+                    darken.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+                }, 100);
+
+                // Opcional: Reproducir sonido triste
+                // let audio = new Audio('ruta-a-tu-sonido-triste.mp3');
+                // audio.play();
             }
         }
     </script>
