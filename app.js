@@ -12,16 +12,22 @@ document.addEventListener('DOMContentLoaded', () => {
         if (pantallaSeleccionada) {
             pantallaSeleccionada.style.display = 'flex';
             currentPantalla = pantalla;
+
+            // Deshabilitar el botón "Siguiente" en la última pantalla
+            const siguienteBtn = pantallaSeleccionada.querySelector('.btn-love');
+            if (siguienteBtn && pantalla === 12) {
+                siguienteBtn.style.display = 'none';
+            }
         } else {
             console.error('Pantalla no encontrada: pantalla' + pantalla);
         }
-
-        // Deshabilitar el botón "Siguiente" en la última pantalla
-        const siguienteBtn = pantallaSeleccionada.querySelector('.btn-love');
-        if (siguienteBtn && pantalla === 12) {
-            siguienteBtn.style.display = 'none';
-        }
     };
+
+    // Agregar eventos de clic a todos los botones "Siguiente"
+    const botonesNext = document.querySelectorAll('.btn-love');
+    botonesNext.forEach((btn, index) => {
+        btn.addEventListener('click', () => mostrarPantalla(index + 2));
+    });
 
     // Mostrar la primera pantalla al cargar la página
     mostrarPantalla(1);
