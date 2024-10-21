@@ -1,33 +1,33 @@
 body {
-    background-color: #FFE4E1; /* Color rosa claro */
-    font-family: 'Comic Sans MS', sans-serif; /* Fuentes divertidas y románticas */
+    background-color: #FFE4E1;
+    font-family: 'Comic Sans MS', sans-serif;
     height: 100vh;
     margin: 0;
-    overflow: hidden; /* Previene el desplazamiento */
+    overflow: hidden;
 }
 
 .pantalla {
     height: 100vh;
-    display: none; /* Oculto por defecto */
-    overflow-y: auto; /* Permite desplazamiento vertical si el contenido es muy largo */
+    display: none;
+    overflow-y: auto;
 }
 
-.pantalla.especial {
-    display: flex; /* Mostrar pantalla especial de forma predeterminada */
+#pantalla1 {
+    display: flex;
 }
 
 .text-love {
-    color: #FF69B4; /* Rosa amoroso */
+    color: #FF69B4;
     font-size: 2rem;
 }
 
 h2 {
-    background-color: rgba(255, 105, 180, 0.5); /* Fondo rosa semitransparente */
+    background-color: rgba(255, 105, 180, 0.5);
     color: white;
     padding: 10px;
     border-radius: 10px;
     font-size: 2.5rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para legibilidad */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .btn-love {
@@ -43,14 +43,13 @@ h2 {
     transform: scale(1.1);
 }
 
-.especial {
+#pantalla1, #pantalla12 {
     background-image: url('img/redondo.png');
     background-size: cover;
     background-position: center;
 }
 
-/* Estilos responsivos para iPhone X y iPhone 11 */
-@media screen and (max-width: 414px) { /* iPhone 11 Pro Max width */
+@media screen and (max-width: 414px) {
     .text-love {
         font-size: 1.8rem;
     }
